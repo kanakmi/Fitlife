@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,900&display=swap');
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        section{
+            height: 100vh;
+            width: 100vw;
+            background: url('/static/home.jpg') no-repeat;
+            background-size: cover;
+        }
+        .getstarted{
+            position: absolute;
+            bottom: 30px;
+            width:250px;
+            height: 60px;
+            border-radius: 20px;
+            background-color: rgba(25, 25, 172, 0.842);
+            margin-left: 45vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Roboto', sans-serif;
+        }
+        .getstarted:hover{
+            animation-name: getstarted;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+        }
+        @keyframes getstarted {
+            to{bottom: 35px;
+                box-sizing: 0 0 10px blue;
+            }
+        }
+        .logo{
+            height: 200px;
+            width: 200px;
+            background: url('/static/logo.png');
+            background-size: cover;
+            padding-top: -40px;
+            margin-left: 30px;
+        }
+        .quote{
+            font-size: 40px;
+            color: white;
+            font-family: roboto;
+            width: 350px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            position: absolute;
+            right: 55px;
+        }
+        .quote>h3{
+            -webkit-text-stroke-width: 1px;
+            -webkit-text-stroke-color: yellow;
+            color: transparent;
+            margin-top: 30px;
+            font-size: 60px;
+        }
+        nav{
+            position: absolute;
+            top: 25px;
+            right: 30px;
+        }
+        nav>ul{
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+        nav>ul>a{
+            color: white;
+            text-decoration: none;
+            font-size: 17px;
+            font-family: roboto;
+        }
+        nav>ul>a:hover{
+            text-shadow: 0 0 10px yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="logo"></div>
+        <a href="/signup"><div class="getstarted">Get Started</div></a>
+        <div class="quote">
+            Everything Starts with <h3>Dedication</h3>
+        </div>
+        <nav>
+            <ul>
+                <a href="/blog">Blog</a>
+                <a href="/signin"><li>SignIn</li></a>
+            </ul>
+        </nav>
+    </section>
+</body>
+</html>

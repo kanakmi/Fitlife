@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,900;1,900&display=swap');
+        
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: roboto;
+        }
+        body{
+            background-color: blue;
+        }
+        .form{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(189, 191, 212, 0.411);
+        }
+        .login{
+            height: 60vh;
+            width: 50%;
+            background-color: rgba(245, 245, 245, 0.507);
+            box-shadow: 1px 1px 20px rgba(68, 68, 114, 0.521);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px white;
+        }
+        .login>p{
+            margin-top: 20px;
+
+        }
+        .login>p>input{
+            height: 20px;
+            border: 1px solid rgba(86, 86, 155, 0.616);
+        }
+        .headin{
+            color: rgb(5, 19, 49);
+            margin-top: -30px;
+            margin-bottom: 5px;
+        }
+        .headin::after{
+            position: absolute;
+            content: "";
+            height: 4px;
+            width: 180px;
+            margin-top: 40px;
+            background-color: yellow;
+            background: linear-gradient('45deg',blue,yellow);
+            animation-name: headings;
+            animation-duration: 1.8s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes headings {
+            50%{margin-left: -300px;}
+        }
+        nav{
+            position: absolute;
+            top: 0;
+            display: flex;
+            align-items: center;
+            width: 80%;
+            justify-content: space-between;
+        }
+        .logo{
+            height: 150px;
+        }
+        .header{
+            font-family: monospace;
+            font-size: 25px;
+            color: rgb(128, 38, 38);
+        }
+        .sbtn{
+            border: none;
+            padding: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        .sbtn:hover{
+            box-shadow: 0 0 15px white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="/static/logo.png" alt="" srcset="" class="logo">
+        <h1 class="header"></h1>
+    </nav>
+    <form action = "" method = "post" class="form">
+        {% csrf_token %}
+        <div class="login">
+            <h1 class="headin">Welcome Back</h1>
+            {{ form.as_p }}
+            <input type="submit" value="Submit" style="margin-top: 10px;" class="sbtn">
+            <p class="hyper">New With us? <a href="/signup">Signup</a></p>
+        </div>
+    </form>
+</body>
+</html>
