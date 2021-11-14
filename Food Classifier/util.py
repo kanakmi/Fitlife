@@ -101,7 +101,7 @@ def classify_image(file_path):
     probab = float(round(predictions[0][c]*100, 2))
 
     result = {
-        'plant': labels[c],
+        'class': labels[c],
         'probablity': probab
     }
 
