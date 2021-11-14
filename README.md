@@ -45,3 +45,4 @@ We utilized Linode for its hosting and storage. Linode is one of the top IaaS pr
 ## 🚀 What's next for Fitlife
 
 - Improving the accuracy of the models.
+- Adding more features.
